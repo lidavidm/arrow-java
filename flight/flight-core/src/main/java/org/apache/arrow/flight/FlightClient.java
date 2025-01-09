@@ -32,6 +32,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.net.URISyntaxException;
 import java.nio.ByteBuffer;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 import java.util.Optional;
@@ -84,7 +85,8 @@ public class FlightClient implements AutoCloseable {
       List<FlightClientMiddleware.Factory> middleware) {
     this.allocator = incomingAllocator.newChildAllocator("flight-client", 0, Long.MAX_VALUE);
     this.channel = channel;
-    this.middleware = middleware;
+    // We need a mutable copy (shared between this class and ClientInterceptorAdapter)
+    this.middleware = new ArrayList<>(middleware);
 
     final ClientInterceptor[] interceptors;
     interceptors =
