@@ -90,7 +90,7 @@ public class FlightClient implements AutoCloseable {
 
     final ClientInterceptor[] interceptors;
     interceptors =
-        new ClientInterceptor[] {authInterceptor, new ClientInterceptorAdapter(middleware)};
+        new ClientInterceptor[] {authInterceptor, new ClientInterceptorAdapter(this.middleware)};
 
     // Create a channel with interceptors pre-applied for DoGet and DoPut
     Channel interceptedChannel = ClientInterceptors.intercept(channel, interceptors);
