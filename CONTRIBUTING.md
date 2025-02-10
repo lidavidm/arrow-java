@@ -32,9 +32,11 @@ existing Arrow issues in [GitHub](https://github.com/apache/arrow-java/issues).
 
 - Create a GitHub issue and submit your changes as a GitHub Pull Request.
 - [Reference the issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/linking-a-pull-request-to-an-issue#linking-a-pull-request-to-an-issue-using-a-keyword) in your PR description.
-- Add one or more of the labels "bug-fix", "dependencies", and "enhancement" to your PR as appropriate.
+- Add one or more of the labels "bug-fix", "chore", "dependencies", "documentation", and "enhancement" to your PR as appropriate.
   - "bug-fix" is for PRs that fix a bug.
-  - "dependencies" is for PRs that upgrade a dependency or other administrative work (build system, release process, etc.).
+  - "chore" is for other administrative work (build system, release process, etc.).
+  - "dependencies" is for PRs that upgrade a dependency.  (Usually only used by dependabot.)
+  - "documentation" is for documentation updates.
   - "enhancement" is for PRs that add new features.
 - Add the "breaking-change" label to your PR if there are breaking API changes.
 - Add the PR title. The PR title will be used as the eventual commit message, so please make it descriptive but succinct.
