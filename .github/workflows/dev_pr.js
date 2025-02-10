@@ -15,6 +15,104 @@
 // specific language governing permissions and limitations
 // under the License.
 
+async function have_comment(github, context, pr_number, tag) {
+    const query = `
+query($owner: String!, $name: String!, $number: Int!, $cursor: String) {
+  repository(owner: $owner, name: $name) {
+    pullRequest(number: $number) {
+      comments (after:$cursor, first: 50) {
+        nodes {
+          id
+          bodyText
+          author {
+            login
+          }
+        }
+        pageInfo {
+          endCursor
+          hasNextPage
+        }
+      }
+    }
+  }
+}`;
+    const tag_regexp = new RegExp(tag);
+
+    let cursor = null;
+    let pr_id = null;
+    while (true) {
+        const result = await github.graphql(query, {
+            owner: context.repo.owner,
+            name: context.repo.repo,
+            number: pr_number,
+            cursor,
+        });
+        console.log(result);
+        pr_id = result.repository.pullRequest.id;
+        cursor = result.repository.pullRequest.comments.pageInfo;
+        const comments = result.repository.pullRequest.comments.nodes;
+
+        for (const comment of comments) {
+            if (comment.author.login === "github-actions[bot]" &&
+                comment.bodyText.match(tag_regexp) !== null) {
+                return {pr_id, comment_id: comment.id};
+            }
+        }
+
+        if (!result.repository.pullRequest.comments.hasNextPage ||
+            comments.length === 0) {
+            break;
+        }
+    }
+    return {pr_id, comment_id: null};
+}
+
+async function upsert_comment(github, {pr_id, comment_id}, body, visible) {
+    console.log(`Upsert comment (pr_id=${pr_id}, comment_id=${comment_id}, visible=${visible})`);
+    if (!visible) {
+        if (comment_id === null) return;
+
+        const query = `
+mutation makeComment($comment: ID!) {
+  minimizeComment(input: {subjectId: $comment, classifier: RESOLVED}) {
+    clientMutationId
+  }
+}`;
+        await github.graphql(query, {
+            comment: comment_id,
+            body,
+        });
+        return;
+    }
+
+    if (comment_id === null) {
+        const query = `
+mutation makeComment($pr: ID!, $body: String!) {
+  addComment(input: {subjectId: $pr, body: $body}) {
+    clientMutationId
+  }
+}`;
+        await github.graphql(query, {
+            pr: pr_id,
+            body,
+        });
+    } else {
+        const query = `
+mutation makeComment($comment: ID!, $body: String!) {
+  unminimizeComment(input: {subjectId: $comment}) {
+    clientMutationId
+  }
+  updateIssueComment(input: {id: $comment, body: $body}) {
+    clientMutationId
+  }
+}`;
+        await github.graphql(query, {
+            comment: comment_id,
+            body,
+        });
+    }
+}
+
 module.exports = {
     check_title_format: function({core, github, context}) {
         const title = context.payload.pull_request.title;
@@ -67,17 +165,30 @@ module.exports = {
             }
         }
 
+        // Look to see if we left a comment before.
+        const comment_tag = "label_helper_comment";
+        const maybe_comment_id = await have_comment(github, context, context.payload.pull_request.number, comment_tag);
+        console.log("Found comment?");
+        console.log(maybe_comment_id);
+        const body_text = `
+<!-- ${comment_tag} -->
+Thank you for opening a pull request!
+
+Please label the PR with one or more of:
+
+${categories.map(c => `- ${c}`).join("\n")}
+
+Also, add the 'breaking-change' label if appropriate.
+
+See [CONTRIBUTING.md](https://github.com/apache/arrow-java/blob/main/CONTRIBUTING.md) for details.
+`;
+
         if (found) {
             console.log("PR has appropriate label(s)");
+            await upsert_comment(github, maybe_comment_id, body_text, false);
         } else {
-            console.log("PR has is missing label(s)");
-            console.log("Label the PR with one or more of:");
-            for (const label of categories) {
-                console.log(`- ${label}`);
-            }
-            console.log();
-            console.log("Also, add 'breaking-change' if appropriate.");
-            console.log("See CONTRIBUTING.md for details.");
+            console.log(body_text);
+            await upsert_comment(github, maybe_comment_id, body_text, true);
             core.setFailed("Missing required labels.  See CONTRIBUTING.md");
         }
     },
