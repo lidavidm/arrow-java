@@ -1,8 +1,7 @@
-<!-- Thank you for opening a new pull request. -->
-<!-- Please add one or more of these PR labels as appropriate: bug-fix, enhancement, documentation, dependencies, chore. -->
-<!-- Please describe your changes: -->
+## What's Changed
 
-<!-- If there are breaking changes, please uncomment this line: -->
-<!-- **This contains breaking changes.** -->
+Please fill in a description of the changes here.
 
-<!-- Please link any issues with closing keywords, e.g. "Closes #NNN". ->
+**This contains breaking changes.**  <!-- Remove this line if there are no breaking changes. -->
+
+Closes #NNN.
