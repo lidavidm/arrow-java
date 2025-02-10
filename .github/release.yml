@@ -15,7 +15,20 @@
 # specific language governing permissions and limitations
 # under the License.
 
-.gitmodules
-.github/pull_request_template.md
-dataset/src/test/resources/data/student.csv
-docs/Makefile
+changelog:
+  categories:
+    - title: Breaking Changes
+      labels:
+        - breaking-change
+
+    - title: New Features and Enhancements
+      labels:
+        - enhancement
+
+    - title: Bug Fixes
+      labels:
+        - bug-fix
+
+    - title: Other Changes
+      labels:
+        - "*"
