@@ -49,8 +49,6 @@ GH-12345: Document the pull request process
 Explain how to open a pull request and what the title, body, and labels should be.
 
 Closes #12345.
-
-Labels: dependencies
 ```
 
 Example #2:
