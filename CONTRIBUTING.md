@@ -59,8 +59,6 @@ GH-42424: Expose Netty server builder in Flight
 Allow direct usage of gRPC APIs for low-level control.
 
 Closes #42424.
-
-Labels: enhancement
 ```
 
 ### Minor Fixes
