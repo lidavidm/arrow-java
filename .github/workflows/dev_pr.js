@@ -16,14 +16,16 @@
 // under the License.
 
 async function have_comment(github, context, pr_number, tag) {
+    console.log(`Looking for existing comment on ${pr_number} with substring ${tag}`);
     const query = `
 query($owner: String!, $name: String!, $number: Int!, $cursor: String) {
   repository(owner: $owner, name: $name) {
     pullRequest(number: $number) {
+      id
       comments (after:$cursor, first: 50) {
         nodes {
           id
-          bodyText
+          body
           author {
             login
           }
@@ -47,14 +49,15 @@ query($owner: String!, $name: String!, $number: Int!, $cursor: String) {
             number: pr_number,
             cursor,
         });
-        console.log(result);
         pr_id = result.repository.pullRequest.id;
         cursor = result.repository.pullRequest.comments.pageInfo;
         const comments = result.repository.pullRequest.comments.nodes;
 
         for (const comment of comments) {
-            if (comment.author.login === "github-actions[bot]" &&
-                comment.bodyText.match(tag_regexp) !== null) {
+            console.log(comment);
+            if (comment.author.login === "github-actions" &&
+                comment.body.match(tag_regexp) !== null) {
+                console.log("Found existing comment");
                 return {pr_id, comment_id: comment.id};
             }
         }
@@ -64,6 +67,7 @@ query($owner: String!, $name: String!, $number: Int!, $cursor: String) {
             break;
         }
     }
+    console.log("No existing comment");
     return {pr_id, comment_id: null};
 }
 
