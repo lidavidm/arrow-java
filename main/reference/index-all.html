@@ -68,6 +68,12 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/AbstractContainerVector.html#%3Cinit%3E(java.lang.String,org.apache.arrow.memory.BufferAllocator,org.apache.arrow.vector.util.CallBack)" class="member-name-link">AbstractContainerVector(String, BufferAllocator, CallBack)</a> - Constructor for class org.apache.arrow.vector.complex.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/AbstractContainerVector.html" title="class in org.apache.arrow.vector.complex">AbstractContainerVector</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html" class="type-name-link" title="class in org.apache.arrow.vector.complex.impl">AbstractExtensionTypeWriter</a>&lt;<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html" title="type parameter in AbstractExtensionTypeWriter">T</a> extends <a href="org.apache.arrow.vector/org/apache/arrow/vector/ExtensionTypeVector.html" title="class in org.apache.arrow.vector">ExtensionTypeVector</a>&gt; - Class in <a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/package-summary.html">org.apache.arrow.vector.complex.impl</a></dt>
+<dd>
+<div class="block">Base <code>AbstractFieldWriter</code> class for an <a href="org.apache.arrow.vector/org/apache/arrow/vector/ExtensionTypeVector.html" title="class in org.apache.arrow.vector"><code>ExtensionTypeVector</code></a>.</div>
+</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html#%3Cinit%3E(T)" class="member-name-link">AbstractExtensionTypeWriter(T)</a> - Constructor for class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html" title="class in org.apache.arrow.vector.complex.impl">AbstractExtensionTypeWriter</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/AbstractStructVector.html" class="type-name-link" title="class in org.apache.arrow.vector.complex">AbstractStructVector</a> - Class in <a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/package-summary.html">org.apache.arrow.vector.complex</a></dt>
 <dd>
 <div class="block">Base class for StructVectors.</div>
@@ -683,6 +689,24 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block"><code>repeated .gandiva.types.ExpressionRoot exprs = 2;</code></div>
 </dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ComplexWriterImpl.html#addExtensionTypeWriterFactory(org.apache.arrow.vector.complex.impl.ExtensionTypeWriterFactory)" class="member-name-link">addExtensionTypeWriterFactory(ExtensionTypeWriterFactory)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ComplexWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">ComplexWriterImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/PromotableWriter.html#addExtensionTypeWriterFactory(org.apache.arrow.vector.complex.impl.ExtensionTypeWriterFactory)" class="member-name-link">addExtensionTypeWriterFactory(ExtensionTypeWriterFactory)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/PromotableWriter.html" title="class in org.apache.arrow.vector.complex.impl">PromotableWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html#addExtensionTypeWriterFactory(org.apache.arrow.vector.complex.impl.ExtensionTypeWriterFactory)" class="member-name-link">addExtensionTypeWriterFactory(ExtensionTypeWriterFactory)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionExtensionWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListViewWriter.html#addExtensionTypeWriterFactory(org.apache.arrow.vector.complex.impl.ExtensionTypeWriterFactory)" class="member-name-link">addExtensionTypeWriterFactory(ExtensionTypeWriterFactory)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListViewWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionLargeListViewWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListWriter.html#addExtensionTypeWriterFactory(org.apache.arrow.vector.complex.impl.ExtensionTypeWriterFactory)" class="member-name-link">addExtensionTypeWriterFactory(ExtensionTypeWriterFactory)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionLargeListWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListViewWriter.html#addExtensionTypeWriterFactory(org.apache.arrow.vector.complex.impl.ExtensionTypeWriterFactory)" class="member-name-link">addExtensionTypeWriterFactory(ExtensionTypeWriterFactory)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListViewWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionListViewWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListWriter.html#addExtensionTypeWriterFactory(org.apache.arrow.vector.complex.impl.ExtensionTypeWriterFactory)" class="member-name-link">addExtensionTypeWriterFactory(ExtensionTypeWriterFactory)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionListWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/BaseWriter.ExtensionWriter.html#addExtensionTypeWriterFactory(org.apache.arrow.vector.complex.impl.ExtensionTypeWriterFactory)" class="member-name-link">addExtensionTypeWriterFactory(ExtensionTypeWriterFactory)</a> - Method in interface org.apache.arrow.vector.complex.writer.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/BaseWriter.ExtensionWriter.html" title="interface in org.apache.arrow.vector.complex.writer">BaseWriter.ExtensionWriter</a></dt>
+<dd>
+<div class="block">Adds the given extension type factory.</div>
+</dd>
 <dt><a href="org.apache.arrow.format/org/apache/arrow/flatbuf/Schema.html#addFeatures(com.google.flatbuffers.FlatBufferBuilder,int)" class="member-name-link">addFeatures(FlatBufferBuilder, int)</a> - Static method in class org.apache.arrow.flatbuf.<a href="org.apache.arrow.format/org/apache/arrow/flatbuf/Schema.html" title="class in org.apache.arrow.flatbuf">Schema</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.format/org/apache/arrow/flatbuf/Schema.html#addFields(com.google.flatbuffers.FlatBufferBuilder,int)" class="member-name-link">addFields(FlatBufferBuilder, int)</a> - Static method in class org.apache.arrow.flatbuf.<a href="org.apache.arrow.format/org/apache/arrow/flatbuf/Schema.html" title="class in org.apache.arrow.flatbuf">Schema</a></dt>
@@ -1186,6 +1210,8 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="org.apache.arrow.flight.core/org/apache/arrow/flight/Criteria.html#ALL" class="member-name-link">ALL</a> - Static variable in class org.apache.arrow.flight.<a href="org.apache.arrow.flight.core/org/apache/arrow/flight/Criteria.html" title="class in org.apache.arrow.flight">Criteria</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html#allocate()" class="member-name-link">allocate()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html" title="class in org.apache.arrow.vector.complex.impl">AbstractExtensionTypeWriter</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BigIntWriterImpl.html#allocate()" class="member-name-link">allocate()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BigIntWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">BigIntWriterImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BitWriterImpl.html#allocate()" class="member-name-link">allocate()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BitWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">BitWriterImpl</a></dt>
@@ -1267,6 +1293,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt4WriterImpl.html#allocate()" class="member-name-link">allocate()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt4WriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">UInt4WriterImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt8WriterImpl.html#allocate()" class="member-name-link">allocate()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt8WriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">UInt8WriterImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html#allocate()" class="member-name-link">allocate()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionExtensionWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionFixedSizeListWriter.html#allocate()" class="member-name-link">allocate()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionFixedSizeListWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionFixedSizeListWriter</a></dt>
 <dd>&nbsp;</dd>
@@ -3100,6 +3128,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/BaseWriter.html" class="type-name-link" title="interface in org.apache.arrow.vector.complex.writer">BaseWriter</a> - Interface in <a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/package-summary.html">org.apache.arrow.vector.complex.writer</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/BaseWriter.ComplexWriter.html" class="type-name-link" title="interface in org.apache.arrow.vector.complex.writer">BaseWriter.ComplexWriter</a> - Interface in <a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/package-summary.html">org.apache.arrow.vector.complex.writer</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/BaseWriter.ExtensionWriter.html" class="type-name-link" title="interface in org.apache.arrow.vector.complex.writer">BaseWriter.ExtensionWriter</a> - Interface in <a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/package-summary.html">org.apache.arrow.vector.complex.writer</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/BaseWriter.ListWriter.html" class="type-name-link" title="interface in org.apache.arrow.vector.complex.writer">BaseWriter.ListWriter</a> - Interface in <a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/package-summary.html">org.apache.arrow.vector.complex.writer</a></dt>
 <dd>&nbsp;</dd>
@@ -5255,6 +5285,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/FixedSizeListVector.html#clear()" class="member-name-link">clear()</a> - Method in class org.apache.arrow.vector.complex.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/FixedSizeListVector.html" title="class in org.apache.arrow.vector.complex">FixedSizeListVector</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html#clear()" class="member-name-link">clear()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html" title="class in org.apache.arrow.vector.complex.impl">AbstractExtensionTypeWriter</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BigIntWriterImpl.html#clear()" class="member-name-link">clear()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BigIntWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">BigIntWriterImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BitWriterImpl.html#clear()" class="member-name-link">clear()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BitWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">BitWriterImpl</a></dt>
@@ -5336,6 +5368,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt4WriterImpl.html#clear()" class="member-name-link">clear()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt4WriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">UInt4WriterImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt8WriterImpl.html#clear()" class="member-name-link">clear()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt8WriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">UInt8WriterImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html#clear()" class="member-name-link">clear()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionExtensionWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionFixedSizeListWriter.html#clear()" class="member-name-link">clear()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionFixedSizeListWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionFixedSizeListWriter</a></dt>
 <dd>&nbsp;</dd>
@@ -6575,6 +6609,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/DenseUnionVector.html#close()" class="member-name-link">close()</a> - Method in class org.apache.arrow.vector.complex.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/DenseUnionVector.html" title="class in org.apache.arrow.vector.complex">DenseUnionVector</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html#close()" class="member-name-link">close()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html" title="class in org.apache.arrow.vector.complex.impl">AbstractExtensionTypeWriter</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BigIntWriterImpl.html#close()" class="member-name-link">close()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BigIntWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">BigIntWriterImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BitWriterImpl.html#close()" class="member-name-link">close()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BitWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">BitWriterImpl</a></dt>
@@ -6656,6 +6692,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt4WriterImpl.html#close()" class="member-name-link">close()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt4WriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">UInt4WriterImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt8WriterImpl.html#close()" class="member-name-link">close()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt8WriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">UInt8WriterImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html#close()" class="member-name-link">close()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionExtensionWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionFixedSizeListWriter.html#close()" class="member-name-link">close()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionFixedSizeListWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionFixedSizeListWriter</a></dt>
 <dd>&nbsp;</dd>
@@ -11636,6 +11674,44 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="org.apache.arrow.gandiva/org/apache/arrow/gandiva/ipc/GandivaTypes.ExpressionList.html#EXPRS_FIELD_NUMBER" class="member-name-link">EXPRS_FIELD_NUMBER</a> - Static variable in class org.apache.arrow.gandiva.ipc.<a href="org.apache.arrow.gandiva/org/apache/arrow/gandiva/ipc/GandivaTypes.ExpressionList.html" title="class in org.apache.arrow.gandiva.ipc">GandivaTypes.ExpressionList</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ComplexWriterImpl.html#extension(java.lang.String,org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(String, ArrowType)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ComplexWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">ComplexWriterImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/PromotableWriter.html#extension(java.lang.String,org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(String, ArrowType)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/PromotableWriter.html" title="class in org.apache.arrow.vector.complex.impl">PromotableWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/NullableStructWriter.html#extension(java.lang.String,org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(String, ArrowType)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/NullableStructWriter.html" title="class in org.apache.arrow.vector.complex.impl">NullableStructWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/SingleStructWriter.html#extension(java.lang.String,org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(String, ArrowType)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/SingleStructWriter.html" title="class in org.apache.arrow.vector.complex.impl">SingleStructWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListViewWriter.html#extension(java.lang.String,org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(String, ArrowType)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListViewWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionLargeListViewWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListWriter.html#extension(java.lang.String,org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(String, ArrowType)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionLargeListWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListViewWriter.html#extension(java.lang.String,org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(String, ArrowType)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListViewWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionListViewWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListWriter.html#extension(java.lang.String,org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(String, ArrowType)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionListWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionWriter.html#extension(java.lang.String,org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(String, ArrowType)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/BaseWriter.StructWriter.html#extension(java.lang.String,org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(String, ArrowType)</a> - Method in interface org.apache.arrow.vector.complex.writer.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/BaseWriter.StructWriter.html" title="interface in org.apache.arrow.vector.complex.writer">BaseWriter.StructWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ComplexWriterImpl.html#extension(org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(ArrowType)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ComplexWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">ComplexWriterImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/PromotableWriter.html#extension(org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(ArrowType)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/PromotableWriter.html" title="class in org.apache.arrow.vector.complex.impl">PromotableWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListViewWriter.html#extension(org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(ArrowType)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListViewWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionLargeListViewWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListWriter.html#extension(org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(ArrowType)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionLargeListWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListViewWriter.html#extension(org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(ArrowType)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListViewWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionListViewWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListWriter.html#extension(org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(ArrowType)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionListWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionMapWriter.html#extension(org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(ArrowType)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionMapWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionMapWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionWriter.html#extension(org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(ArrowType)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/BaseWriter.ListWriter.html#extension(org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">extension(ArrowType)</a> - Method in interface org.apache.arrow.vector.complex.writer.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/BaseWriter.ListWriter.html" title="interface in org.apache.arrow.vector.complex.writer">BaseWriter.ListWriter</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/types/pojo/ArrowType.ExtensionType.html#EXTENSION_METADATA_KEY_METADATA" class="member-name-link">EXTENSION_METADATA_KEY_METADATA</a> - Static variable in class org.apache.arrow.vector.types.pojo.<a href="org.apache.arrow.vector/org/apache/arrow/vector/types/pojo/ArrowType.ExtensionType.html" title="class in org.apache.arrow.vector.types.pojo">ArrowType.ExtensionType</a></dt>
 <dd>
 <div class="block">The field metadata key storing metadata for the extension type.</div>
@@ -11652,6 +11728,12 @@ loadScripts(document, 'script');</script>
 <dd>
 <div class="block">Check equality of this type to another user-defined type.</div>
 </dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/holders/ExtensionHolder.html" class="type-name-link" title="class in org.apache.arrow.vector.holders">ExtensionHolder</a> - Class in <a href="org.apache.arrow.vector/org/apache/arrow/vector/holders/package-summary.html">org.apache.arrow.vector.holders</a></dt>
+<dd>
+<div class="block">Base <a href="org.apache.arrow.vector/org/apache/arrow/vector/holders/ValueHolder.html" title="interface in org.apache.arrow.vector.holders"><code>ValueHolder</code></a> class for a <a href="org.apache.arrow.vector/org/apache/arrow/vector/ExtensionTypeVector.html" title="class in org.apache.arrow.vector"><code>ExtensionTypeVector</code></a>.</div>
+</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/holders/ExtensionHolder.html#%3Cinit%3E()" class="member-name-link">ExtensionHolder()</a> - Constructor for class org.apache.arrow.vector.holders.<a href="org.apache.arrow.vector/org/apache/arrow/vector/holders/ExtensionHolder.html" title="class in org.apache.arrow.vector.holders">ExtensionHolder</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/extension/OpaqueType.html#extensionName()" class="member-name-link">extensionName()</a> - Method in class org.apache.arrow.vector.extension.<a href="org.apache.arrow.vector/org/apache/arrow/vector/extension/OpaqueType.html" title="class in org.apache.arrow.vector.extension">OpaqueType</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/types/pojo/ArrowType.ExtensionType.html#extensionName()" class="member-name-link">extensionName()</a> - Method in class org.apache.arrow.vector.types.pojo.<a href="org.apache.arrow.vector/org/apache/arrow/vector/types/pojo/ArrowType.ExtensionType.html" title="class in org.apache.arrow.vector.types.pojo">ArrowType.ExtensionType</a></dt>
@@ -11679,6 +11761,10 @@ loadScripts(document, 'script');</script>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/ExtensionTypeVector.html#%3Cinit%3E(org.apache.arrow.vector.types.pojo.Field,org.apache.arrow.memory.BufferAllocator,T)" class="member-name-link">ExtensionTypeVector(Field, BufferAllocator, T)</a> - Constructor for class org.apache.arrow.vector.<a href="org.apache.arrow.vector/org/apache/arrow/vector/ExtensionTypeVector.html" title="class in org.apache.arrow.vector">ExtensionTypeVector</a></dt>
 <dd>
 <div class="block">Instantiate an extension type vector.</div>
+</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ExtensionTypeWriterFactory.html" class="type-name-link" title="interface in org.apache.arrow.vector.complex.impl">ExtensionTypeWriterFactory</a>&lt;<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ExtensionTypeWriterFactory.html" title="type parameter in ExtensionTypeWriterFactory">T</a> extends <a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/FieldWriter.html" title="interface in org.apache.arrow.vector.complex.writer">FieldWriter</a>&gt; - Interface in <a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/package-summary.html">org.apache.arrow.vector.complex.impl</a></dt>
+<dd>
+<div class="block">A factory interface for creating instances of <code>ExtensionTypeWriter</code>.</div>
 </dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/compression/CompressionUtil.html#extractUncompressedBuffer(org.apache.arrow.memory.ArrowBuf)" class="member-name-link">extractUncompressedBuffer(ArrowBuf)</a> - Static method in class org.apache.arrow.vector.compression.<a href="org.apache.arrow.vector/org/apache/arrow/vector/compression/CompressionUtil.html" title="class in org.apache.arrow.vector.compression">CompressionUtil</a></dt>
 <dd>
@@ -19717,6 +19803,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/FixedSizeListVector.html#getField()" class="member-name-link">getField()</a> - Method in class org.apache.arrow.vector.complex.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/FixedSizeListVector.html" title="class in org.apache.arrow.vector.complex">FixedSizeListVector</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html#getField()" class="member-name-link">getField()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html" title="class in org.apache.arrow.vector.complex.impl">AbstractExtensionTypeWriter</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/SingleListReaderImpl.html#getField()" class="member-name-link">getField()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/SingleListReaderImpl.html" title="class in org.apache.arrow.vector.complex.impl">SingleListReaderImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BigIntReaderImpl.html#getField()" class="member-name-link">getField()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BigIntReaderImpl.html" title="class in org.apache.arrow.vector.complex.impl">BigIntReaderImpl</a></dt>
@@ -19878,6 +19966,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt8ReaderImpl.html#getField()" class="member-name-link">getField()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt8ReaderImpl.html" title="class in org.apache.arrow.vector.complex.impl">UInt8ReaderImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt8WriterImpl.html#getField()" class="member-name-link">getField()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt8WriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">UInt8WriterImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html#getField()" class="member-name-link">getField()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionExtensionWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionFixedSizeListWriter.html#getField()" class="member-name-link">getField()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionFixedSizeListWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionFixedSizeListWriter</a></dt>
 <dd>&nbsp;</dd>
@@ -28488,6 +28578,8 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/FixedSizeListVector.html#getValueCapacity()" class="member-name-link">getValueCapacity()</a> - Method in class org.apache.arrow.vector.complex.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/FixedSizeListVector.html" title="class in org.apache.arrow.vector.complex">FixedSizeListVector</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html#getValueCapacity()" class="member-name-link">getValueCapacity()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html" title="class in org.apache.arrow.vector.complex.impl">AbstractExtensionTypeWriter</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BigIntWriterImpl.html#getValueCapacity()" class="member-name-link">getValueCapacity()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BigIntWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">BigIntWriterImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BitWriterImpl.html#getValueCapacity()" class="member-name-link">getValueCapacity()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BitWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">BitWriterImpl</a></dt>
@@ -28569,6 +28661,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt4WriterImpl.html#getValueCapacity()" class="member-name-link">getValueCapacity()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt4WriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">UInt4WriterImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt8WriterImpl.html#getValueCapacity()" class="member-name-link">getValueCapacity()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt8WriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">UInt8WriterImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html#getValueCapacity()" class="member-name-link">getValueCapacity()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionExtensionWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionFixedSizeListWriter.html#getValueCapacity()" class="member-name-link">getValueCapacity()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionFixedSizeListWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionFixedSizeListWriter</a></dt>
 <dd>&nbsp;</dd>
@@ -29056,6 +29150,10 @@ loadScripts(document, 'script');</script>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/PromotableWriter.html#getWriter(org.apache.arrow.vector.types.Types.MinorType,org.apache.arrow.vector.types.pojo.ArrowType)" class="member-name-link">getWriter(Types.MinorType, ArrowType)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/PromotableWriter.html" title="class in org.apache.arrow.vector.complex.impl">PromotableWriter</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ExtensionTypeWriterFactory.html#getWriterImpl(org.apache.arrow.vector.ExtensionTypeVector)" class="member-name-link">getWriterImpl(ExtensionTypeVector)</a> - Method in interface org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ExtensionTypeWriterFactory.html" title="interface in org.apache.arrow.vector.complex.impl">ExtensionTypeWriterFactory</a></dt>
+<dd>
+<div class="block">Returns an instance of the writer implementation for the given <a href="org.apache.arrow.vector/org/apache/arrow/vector/ExtensionTypeVector.html" title="class in org.apache.arrow.vector"><code>ExtensionTypeVector</code></a>.</div>
+</dd>
 <dt><a href="org.apache.arrow.flight.sql/org/apache/arrow/flight/sql/FlightSqlClient.html#getXdbcTypeInfo(int,org.apache.arrow.flight.CallOption...)" class="member-name-link">getXdbcTypeInfo(int, CallOption...)</a> - Method in class org.apache.arrow.flight.sql.<a href="org.apache.arrow.flight.sql/org/apache/arrow/flight/sql/FlightSqlClient.html" title="class in org.apache.arrow.flight.sql">FlightSqlClient</a></dt>
 <dd>
 <div class="block">Request the information about the data types supported related to a filter data type.</div>
@@ -33647,6 +33745,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/holders/DenseUnionHolder.html#isSet" class="member-name-link">isSet</a> - Variable in class org.apache.arrow.vector.holders.<a href="org.apache.arrow.vector/org/apache/arrow/vector/holders/DenseUnionHolder.html" title="class in org.apache.arrow.vector.holders">DenseUnionHolder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/holders/DurationHolder.html#isSet" class="member-name-link">isSet</a> - Variable in class org.apache.arrow.vector.holders.<a href="org.apache.arrow.vector/org/apache/arrow/vector/holders/DurationHolder.html" title="class in org.apache.arrow.vector.holders">DurationHolder</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/holders/ExtensionHolder.html#isSet" class="member-name-link">isSet</a> - Variable in class org.apache.arrow.vector.holders.<a href="org.apache.arrow.vector/org/apache/arrow/vector/holders/ExtensionHolder.html" title="class in org.apache.arrow.vector.holders">ExtensionHolder</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/holders/FixedSizeBinaryHolder.html#isSet" class="member-name-link">isSet</a> - Variable in class org.apache.arrow.vector.holders.<a href="org.apache.arrow.vector/org/apache/arrow/vector/holders/FixedSizeBinaryHolder.html" title="class in org.apache.arrow.vector.holders">FixedSizeBinaryHolder</a></dt>
 <dd>&nbsp;</dd>
@@ -48455,7 +48555,7 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/NullReader.html#setPosition(int)" class="member-name-link">setPosition(int)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/NullReader.html" title="class in org.apache.arrow.vector.complex.impl">NullReader</a></dt>
 <dd>&nbsp;</dd>
-<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/TimeSecWriterImpl.html#setPosition(int)" class="member-name-link">setPosition(int)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/TimeSecWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">TimeSecWriterImpl</a></dt>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html#setPosition(int)" class="member-name-link">setPosition(int)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html" title="class in org.apache.arrow.vector.complex.impl">AbstractExtensionTypeWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BigIntHolderReaderImpl.html#setPosition(int)" class="member-name-link">setPosition(int)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BigIntHolderReaderImpl.html" title="class in org.apache.arrow.vector.complex.impl">BigIntHolderReaderImpl</a></dt>
 <dd>&nbsp;</dd>
@@ -48620,6 +48720,8 @@ loadScripts(document, 'script');</script>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt4HolderReaderImpl.html#setPosition(int)" class="member-name-link">setPosition(int)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt4HolderReaderImpl.html" title="class in org.apache.arrow.vector.complex.impl">UInt4HolderReaderImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt8HolderReaderImpl.html#setPosition(int)" class="member-name-link">setPosition(int)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UInt8HolderReaderImpl.html" title="class in org.apache.arrow.vector.complex.impl">UInt8HolderReaderImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html#setPosition(int)" class="member-name-link">setPosition(int)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionExtensionWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionFixedSizeListReader.html#setPosition(int)" class="member-name-link">setPosition(int)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionFixedSizeListReader.html" title="class in org.apache.arrow.vector.complex.impl">UnionFixedSizeListReader</a></dt>
 <dd>&nbsp;</dd>
@@ -56538,6 +56640,10 @@ loadScripts(document, 'script');</script>
 </dd>
 <dt><a href="org.apache.arrow.format/org/apache/arrow/flatbuf/Union.Vector.html" class="type-name-link" title="class in org.apache.arrow.flatbuf">Union.Vector</a> - Class in <a href="org.apache.arrow.format/org/apache/arrow/flatbuf/package-summary.html">org.apache.arrow.flatbuf</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html" class="type-name-link" title="class in org.apache.arrow.vector.complex.impl">UnionExtensionWriter</a> - Class in <a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/package-summary.html">org.apache.arrow.vector.complex.impl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html#%3Cinit%3E(org.apache.arrow.vector.ExtensionTypeVector)" class="member-name-link">UnionExtensionWriter(ExtensionTypeVector)</a> - Constructor for class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionExtensionWriter</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionFixedSizeListReader.html" class="type-name-link" title="class in org.apache.arrow.vector.complex.impl">UnionFixedSizeListReader</a> - Class in <a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/package-summary.html">org.apache.arrow.vector.complex.impl</a></dt>
 <dd>
 <div class="block">Reader for fixed size list vectors.</div>
@@ -58549,7 +58655,11 @@ the order they are declared.</div>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/BaseRepeatedValueViewVector.html#vector" class="member-name-link">vector</a> - Variable in class org.apache.arrow.vector.complex.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/BaseRepeatedValueViewVector.html" title="class in org.apache.arrow.vector.complex">BaseRepeatedValueViewVector</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html#vector" class="member-name-link">vector</a> - Variable in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html" title="class in org.apache.arrow.vector.complex.impl">AbstractExtensionTypeWriter</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/PromotableWriter.html#vector" class="member-name-link">vector</a> - Variable in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/PromotableWriter.html" title="class in org.apache.arrow.vector.complex.impl">PromotableWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html#vector" class="member-name-link">vector</a> - Variable in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionExtensionWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionFixedSizeListWriter.html#vector" class="member-name-link">vector</a> - Variable in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionFixedSizeListWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionFixedSizeListWriter</a></dt>
 <dd>&nbsp;</dd>
@@ -60216,6 +60326,22 @@ the order they are declared.</div>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/DurationWriter.html#write(org.apache.arrow.vector.holders.DurationHolder)" class="member-name-link">write(DurationHolder)</a> - Method in interface org.apache.arrow.vector.complex.writer.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/DurationWriter.html" title="interface in org.apache.arrow.vector.complex.writer">DurationWriter</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ComplexWriterImpl.html#write(org.apache.arrow.vector.holders.ExtensionHolder)" class="member-name-link">write(ExtensionHolder)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ComplexWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">ComplexWriterImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html#write(org.apache.arrow.vector.holders.ExtensionHolder)" class="member-name-link">write(ExtensionHolder)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionExtensionWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListViewWriter.html#write(org.apache.arrow.vector.holders.ExtensionHolder)" class="member-name-link">write(ExtensionHolder)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListViewWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionLargeListViewWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListWriter.html#write(org.apache.arrow.vector.holders.ExtensionHolder)" class="member-name-link">write(ExtensionHolder)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionLargeListWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListViewWriter.html#write(org.apache.arrow.vector.holders.ExtensionHolder)" class="member-name-link">write(ExtensionHolder)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListViewWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionListViewWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListWriter.html#write(org.apache.arrow.vector.holders.ExtensionHolder)" class="member-name-link">write(ExtensionHolder)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionListWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/BaseWriter.ExtensionWriter.html#write(org.apache.arrow.vector.holders.ExtensionHolder)" class="member-name-link">write(ExtensionHolder)</a> - Method in interface org.apache.arrow.vector.complex.writer.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/BaseWriter.ExtensionWriter.html" title="interface in org.apache.arrow.vector.complex.writer">BaseWriter.ExtensionWriter</a></dt>
+<dd>
+<div class="block">Writes value from the given extension holder.</div>
+</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ComplexWriterImpl.html#write(org.apache.arrow.vector.holders.FixedSizeBinaryHolder)" class="member-name-link">write(FixedSizeBinaryHolder)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ComplexWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">ComplexWriterImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/PromotableWriter.html#write(org.apache.arrow.vector.holders.FixedSizeBinaryHolder)" class="member-name-link">write(FixedSizeBinaryHolder)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/PromotableWriter.html" title="class in org.apache.arrow.vector.complex.impl">PromotableWriter</a></dt>
@@ -61444,6 +61570,24 @@ the order they are declared.</div>
 <dd>
 <div class="block">Write an EOS identifier to the WriteChannel.</div>
 </dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ComplexWriterImpl.html#writeExtension(java.lang.Object)" class="member-name-link">writeExtension(Object)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ComplexWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">ComplexWriterImpl</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/PromotableWriter.html#writeExtension(java.lang.Object)" class="member-name-link">writeExtension(Object)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/PromotableWriter.html" title="class in org.apache.arrow.vector.complex.impl">PromotableWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html#writeExtension(java.lang.Object)" class="member-name-link">writeExtension(Object)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionExtensionWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListViewWriter.html#writeExtension(java.lang.Object)" class="member-name-link">writeExtension(Object)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListViewWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionLargeListViewWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListWriter.html#writeExtension(java.lang.Object)" class="member-name-link">writeExtension(Object)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionLargeListWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionLargeListWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListViewWriter.html#writeExtension(java.lang.Object)" class="member-name-link">writeExtension(Object)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListViewWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionListViewWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListWriter.html#writeExtension(java.lang.Object)" class="member-name-link">writeExtension(Object)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionListWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionListWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/BaseWriter.ExtensionWriter.html#writeExtension(java.lang.Object)" class="member-name-link">writeExtension(Object)</a> - Method in interface org.apache.arrow.vector.complex.writer.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/BaseWriter.ExtensionWriter.html" title="interface in org.apache.arrow.vector.complex.writer">BaseWriter.ExtensionWriter</a></dt>
+<dd>
+<div class="block">Writes the given extension type value.</div>
+</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ComplexWriterImpl.html#writeFixedSizeBinary(org.apache.arrow.memory.ArrowBuf)" class="member-name-link">writeFixedSizeBinary(ArrowBuf)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ComplexWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">ComplexWriterImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/PromotableWriter.html#writeFixedSizeBinary(org.apache.arrow.memory.ArrowBuf)" class="member-name-link">writeFixedSizeBinary(ArrowBuf)</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/PromotableWriter.html" title="class in org.apache.arrow.vector.complex.impl">PromotableWriter</a></dt>
@@ -61857,6 +62001,8 @@ the order they are declared.</div>
 <dd>
 <div class="block">Write the serialized Message metadata, prefixed by the length, to the output Channel.</div>
 </dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html#writeNull()" class="member-name-link">writeNull()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/AbstractExtensionTypeWriter.html" title="class in org.apache.arrow.vector.complex.impl">AbstractExtensionTypeWriter</a></dt>
+<dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ComplexWriterImpl.html#writeNull()" class="member-name-link">writeNull()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ComplexWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">ComplexWriterImpl</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BigIntWriterImpl.html#writeNull()" class="member-name-link">writeNull()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/BigIntWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">BigIntWriterImpl</a></dt>
@@ -61955,9 +62101,15 @@ the order they are declared.</div>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ViewVarCharWriterImpl.html#writeNull()" class="member-name-link">writeNull()</a> - Method in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/ViewVarCharWriterImpl.html" title="class in org.apache.arrow.vector.complex.impl">ViewVarCharWriterImpl</a></dt>
 <dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/BaseWriter.ExtensionWriter.html#writeNull()" class="member-name-link">writeNull()</a> - Method in interface org.apache.arrow.vector.complex.writer.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/BaseWriter.ExtensionWriter.html" title="interface in org.apache.arrow.vector.complex.writer">BaseWriter.ExtensionWriter</a></dt>
+<dd>
+<div class="block">Writes a null value.</div>
+</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/BaseWriter.html#writeNull()" class="member-name-link">writeNull()</a> - Method in interface org.apache.arrow.vector.complex.writer.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/writer/BaseWriter.html" title="interface in org.apache.arrow.vector.complex.writer">BaseWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/PromotableWriter.html#writer" class="member-name-link">writer</a> - Variable in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/PromotableWriter.html" title="class in org.apache.arrow.vector.complex.impl">PromotableWriter</a></dt>
+<dd>&nbsp;</dd>
+<dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html#writer" class="member-name-link">writer</a> - Variable in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionExtensionWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionExtensionWriter</a></dt>
 <dd>&nbsp;</dd>
 <dt><a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionFixedSizeListWriter.html#writer" class="member-name-link">writer</a> - Variable in class org.apache.arrow.vector.complex.impl.<a href="org.apache.arrow.vector/org/apache/arrow/vector/complex/impl/UnionFixedSizeListWriter.html" title="class in org.apache.arrow.vector.complex.impl">UnionFixedSizeListWriter</a></dt>
 <dd>&nbsp;</dd>
