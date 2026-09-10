@@ -734,8 +734,8 @@ public final class ArrowBuf implements AutoCloseable {
   /**
    * Copy data from this ArrowBuf into a newly allocated array.
    *
-   * <p>This method is more resilient to invalid data inadvertently causing large allocations,
-   * as the byte[] will not be allocated until we check the length.
+   * <p>This method is more resilient to invalid data inadvertently causing large allocations, as
+   * the byte[] will not be allocated until we check the length.
    *
    * @param index index (0 based relative to the portion of memory this ArrowBuf has access to)
    * @param length length of data to copy from this ArrowBuf
