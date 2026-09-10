@@ -1556,7 +1556,6 @@ public abstract class BaseVariableWidthViewVector extends BaseValueVector
    */
   protected byte[] getData(int index) {
     final int dataLength = getValueLength(index);
-    byte[] result = new byte[dataLength];
     if (dataLength > INLINE_SIZE) {
       // data is in the data buffer
       // get buffer index
@@ -1566,12 +1565,11 @@ public abstract class BaseVariableWidthViewVector extends BaseValueVector
       final int dataOffset =
           viewBuffer.getInt(
               ((long) index * ELEMENT_SIZE) + LENGTH_WIDTH + PREFIX_WIDTH + BUF_INDEX_WIDTH);
-      dataBuffers.get(bufferIndex).getBytes(dataOffset, result, 0, dataLength);
-    } else {
-      // data is in the view buffer
-      viewBuffer.getBytes((long) index * ELEMENT_SIZE + BUF_INDEX_WIDTH, result, 0, dataLength);
+      ArrowBuf dataBuffer = dataBuffers.get(bufferIndex);
+      return dataBuffer.getBytesAsArray(dataOffset, dataLength);
     }
-    return result;
+    // data is in the view buffer
+    return viewBuffer.getBytesAsArray((long) index * ELEMENT_SIZE + BUF_INDEX_WIDTH, dataLength);
   }
 
   protected void getData(int index, ReusableBuffer<?> buffer) {
