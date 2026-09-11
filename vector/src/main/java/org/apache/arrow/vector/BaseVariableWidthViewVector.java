@@ -912,7 +912,8 @@ public abstract class BaseVariableWidthViewVector extends BaseValueVector
             viewBuffer.getInt(
                 ((long) i * ELEMENT_SIZE) + LENGTH_WIDTH + PREFIX_WIDTH + BUF_INDEX_WIDTH);
         final ArrowBuf dataBuf = dataBuffers.get(readBufIndex);
-        if (((long) readBufOffset + (long) stringLength) > dataBuf.capacity()) {
+        if (readBufOffset < 0
+            || ((long) readBufOffset + (long) stringLength) > dataBuf.capacity()) {
           throw new IndexOutOfBoundsException(
               String.format(
                   "index: %d, length: %d (expected: range(0, %d))",
@@ -1550,7 +1551,9 @@ public abstract class BaseVariableWidthViewVector extends BaseValueVector
       dataBuffer = viewBuffer;
       dataOffset = index * ELEMENT_SIZE + BUF_INDEX_WIDTH;
     }
-    if (((long) dataOffset + (long) dataLength) > dataBuffer.capacity()) {
+    if (dataOffset < 0
+        || dataLength < 0
+        || ((long) dataOffset + (long) dataLength) > dataBuffer.capacity()) {
       // In this case we don't check BOUNDS_CHECKING_ENABLED
       // Likely this check is redundant, but we are trying to check eagerly before downstream code
       // potentially
