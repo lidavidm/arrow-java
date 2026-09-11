@@ -2925,16 +2925,17 @@ public class TestVariableWidthViewVector {
   @Test
   public void testValidateInvalidOffsets() {
     try (final ViewVarCharVector vector = new ViewVarCharVector("v", allocator)) {
-      vector.allocateNew(8, 1);
+      vector.allocateNew(16, 1);
       vector.allocateOrGetLastDataBuffer(8);
       var offsets = vector.getDataBuffer();
       offsets.setInt(0, 64);
-      offsets.setInt(1, 0);
-      offsets.setInt(2, 0);
-      offsets.setInt(3, 1024);
+      offsets.setInt(4, 0);
+      offsets.setInt(8, 0);
+      offsets.setInt(12, 1024);
       vector.setValueCount(1);
       vector.setIndexDefined(0);
-      assertThrows(IndexOutOfBoundsException.class, vector::validateFull);
+      var e = assertThrows(IndexOutOfBoundsException.class, vector::validateFull);
+      assertTrue(e.getMessage().contains("index: 1024"));
     }
   }
 }
