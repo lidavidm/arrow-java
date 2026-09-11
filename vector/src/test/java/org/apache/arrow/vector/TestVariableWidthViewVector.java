@@ -2928,7 +2928,7 @@ public class TestVariableWidthViewVector {
       vector.allocateNew(16, 1);
       vector.allocateOrGetLastDataBuffer(8);
       var offsets = vector.getDataBuffer();
-      offsets.setInt(0, 64);
+      offsets.setInt(0, Integer.MAX_VALUE);
       offsets.setInt(4, 0);
       offsets.setInt(8, 0);
       offsets.setInt(12, 1024);
