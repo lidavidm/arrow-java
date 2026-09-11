@@ -912,6 +912,12 @@ public abstract class BaseVariableWidthViewVector extends BaseValueVector
             viewBuffer.getInt(
                 ((long) i * ELEMENT_SIZE) + LENGTH_WIDTH + PREFIX_WIDTH + BUF_INDEX_WIDTH);
         final ArrowBuf dataBuf = dataBuffers.get(readBufIndex);
+        if (((long) readBufOffset + (long) stringLength) > dataBuf.capacity()) {
+          throw new IndexOutOfBoundsException(
+              String.format(
+                  "index: %d, length: %d (expected: range(0, %d))",
+                  readBufOffset, stringLength, dataBuf.capacity()));
+        }
 
         // allocate data buffer
         ArrowBuf currentDataBuf = target.allocateOrGetLastDataBuffer(stringLength);
