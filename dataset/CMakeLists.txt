@@ -17,6 +17,7 @@
 
 find_package(ArrowDataset REQUIRED)
 find_package(ArrowSubstrait REQUIRED)
+find_package(ArrowS3 QUIET)
 
 include_directories(${CMAKE_CURRENT_BINARY_DIR} ${CMAKE_CURRENT_SOURCE_DIR}
                     ${JNI_INCLUDE_DIRS} ${JNI_HEADERS_DIR})
@@ -39,6 +40,11 @@ target_link_libraries(arrow_java_jni_dataset
                       jni
                       ArrowDataset::arrow_dataset_static
                       ArrowSubstrait::arrow_substrait_static)
+
+# Older Arrow releases include S3 in arrow_static instead of a separate library.
+if(TARGET ArrowS3::arrow_s3_static)
+  target_link_libraries(arrow_java_jni_dataset ArrowS3::arrow_s3_static)
+endif()
 
 if(BUILD_TESTING)
   add_executable(arrow-java-jni-dataset-test src/main/cpp/jni_util_test.cc

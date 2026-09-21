@@ -199,18 +199,6 @@ jobs:
         run: pip install -e arrow/dev/archery[all]
       - name: Install dependencies
         run: |
-          # We want to use llvm@14 to avoid shared z3
-          # dependency. llvm@14 doesn't depend on z3 and llvm depends
-          # on z3. And Homebrew's z3 provides only shared library. It
-          # doesn't provides static z3 because z3's CMake doesn't accept
-          # building both shared and static libraries at once.
-          # See also: Z3_BUILD_LIBZ3_SHARED in
-          # https://github.com/Z3Prover/z3/blob/master/README-CMake.md
-          #
-          # If llvm is installed, Apache Arrow C++ uses llvm rather than
-          # llvm@14 because llvm is newer than llvm@14.
-          brew uninstall llvm || :
-
           # We can remove this when we drop support for
           # macos-15-intel. because macos-14 or later with arm64 uses /opt/homebrew/
           # not /usr/local/.
@@ -227,6 +215,9 @@ jobs:
             brew install --overwrite ${python_package}
           done
           brew install --overwrite python3
+
+          # Use a version supported by Gandiva with prebuilt macOS bottles.
+          brew install --force-bottle llvm@18
 
           if [ "$(uname -m)" = "arm64" ]; then
             # pkg-config formula is deprecated but it's still installed
@@ -251,8 +242,9 @@ jobs:
           #
           # We don't use Homebrew's Node.js too. Homebrew doesn't provide
           # a bottle for it on x86_64 macOS for the same reason.
-          HOMEBREW_BUNDLE_BREW_SKIP="aws-sdk-cpp grpc node" \
-            brew bundle --file=arrow/cpp/Brewfile
+          # LLVM is installed explicitly above instead of using the latest version.
+          HOMEBREW_BUNDLE_BREW_SKIP="aws-sdk-cpp grpc node llvm" \
+            brew bundle --verbose --file=arrow/cpp/Brewfile
           # We want to link aws-sdk-cpp statically but Homebrew's
           # aws-sdk-cpp provides only shared library. If we have
           # Homebrew's aws-sdk-cpp, our build mix Homebrew's

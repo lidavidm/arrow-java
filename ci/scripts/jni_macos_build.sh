@@ -69,12 +69,22 @@ export ARROW_PARQUET=ON
 
 export AWS_EC2_METADATA_DISABLED=TRUE
 
+llvm_root="$(brew --prefix llvm@18)"
+"${llvm_root}/bin/llvm-config" --version
+llvm_cmake_args=(
+  "-DLLVM_ROOT=${llvm_root}"
+  "-DLLVM_DIR=${llvm_root}/lib/cmake/llvm"
+  "-DCLANG_EXECUTABLE=${llvm_root}/bin/clang"
+  "-DLLVM_LINK_EXECUTABLE=${llvm_root}/bin/llvm-link"
+)
+
 cmake \
   -S "${arrow_dir}/cpp" \
   -B "${build_dir}/cpp" \
   --preset=ninja-release-jni-macos \
   -Dabsl_SOURCE=BUNDLED \
   -Dsimdjson_SOURCE=BUNDLED \
+  "${llvm_cmake_args[@]}" \
   -DCMAKE_INSTALL_PREFIX="${install_dir}"
 cmake --build "${build_dir}/cpp" --target install
 github_actions_group_end
@@ -88,6 +98,7 @@ fi
 JAVA_JNI_CMAKE_ARGS="-DProtobuf_ROOT=${build_dir}/cpp/_deps/protobuf-build"
 JAVA_JNI_CMAKE_ARGS+=" -DProtobuf_SRC_ROOT_FOLDER=${build_dir}/cpp/_deps/protobuf-src"
 JAVA_JNI_CMAKE_ARGS+=" -DARROW_JAVA_JNI_ABSL_INCLUDE_DIR=${absl_include_dir}"
+JAVA_JNI_CMAKE_ARGS+=" ${llvm_cmake_args[*]}"
 export JAVA_JNI_CMAKE_ARGS
 "${source_dir}/ci/scripts/jni_build.sh" \
   "${source_dir}" \
