@@ -197,6 +197,11 @@ jobs:
           python-version: 3.12
       - name: Install Archery
         run: pip install -e arrow/dev/archery[all]
+      - name: Set up Java
+        uses: actions/setup-java@v6
+        with:
+          java-version: '17'
+          distribution: 'temurin'
       - name: Install dependencies
         run: |
           # We can remove this when we drop support for
@@ -227,7 +232,7 @@ jobs:
             brew uninstall pkg-config@0.29.2 || :
           fi
 
-          # We don't use Homebrew's aws-sdk-cpp and gRPC. See the
+          # We don't use Homebrew's aws-sdk-cpp, gRPC, RE2 or Protobuf. See the
           # "brew uninstall" calls below for details. So we don't install
           # them instead of installing and uninstalling them.
           #
@@ -243,8 +248,9 @@ jobs:
           # We don't use Homebrew's Node.js too. Homebrew doesn't provide
           # a bottle for it on x86_64 macOS for the same reason.
           # LLVM is installed explicitly above instead of using the latest version.
-          HOMEBREW_BUNDLE_BREW_SKIP="aws-sdk-cpp grpc node llvm" \
-            brew bundle --verbose --file=arrow/cpp/Brewfile
+          # Keep installed dependencies instead of rebuilding newer releases.
+          HOMEBREW_BUNDLE_BREW_SKIP="aws-sdk-cpp grpc re2 protobuf node llvm" \
+            brew bundle --no-upgrade --verbose --file=arrow/cpp/Brewfile
           # We want to link aws-sdk-cpp statically but Homebrew's
           # aws-sdk-cpp provides only shared library. If we have
           # Homebrew's aws-sdk-cpp, our build mix Homebrew's
@@ -259,14 +265,15 @@ jobs:
           # We uninstall Homebrew's RE2 to ensure using bundled RE2.
           brew uninstall grpc || : # gRPC depends on RE2
           brew uninstall grpc@1.54 || : # gRPC 1.54 may be installed too
-          brew uninstall re2
           # We want to use bundled Protobuf for static linking. If
           # Homebrew's Protobuf is installed, its library file may be
           # used on test  We uninstall Homebrew's Protobuf to ensure using
           # bundled Protobuf.
-          brew uninstall protobuf
-
-          brew bundle --file=Brewfile
+          for package in re2 protobuf; do
+            if brew list --versions "${package}" >/dev/null; then
+              brew uninstall "${package}"
+            fi
+          done
       - name: Prepare ccache
         run: |
           echo "CCACHE_DIR=${PWD}/ccache" >> ${GITHUB_ENV}
@@ -279,8 +286,6 @@ jobs:
       - name: Build
         run: |
           set -e
-          # make brew Java available to CMake
-          export JAVA_HOME=$(brew --prefix openjdk@17)/libexec/openjdk.jdk/Contents/Home
           ci/scripts/jni_macos_build.sh . arrow build jni
       - name: Compress into single artifact to keep directory structure
         run: tar -cvzf jni-macos-${{ matrix.platform.arch }}.tar.gz jni/
