@@ -32,6 +32,7 @@ public class DecimalTypeUtil {
   }
 
   private static final int MIN_ADJUSTED_SCALE = 6;
+
   /// The maximum precision representable by a 16-byte decimal
   private static final int MAX_PRECISION = 38;
 
